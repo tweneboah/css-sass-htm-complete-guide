@@ -1,0 +1,147 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    padding: 4rem;
+}
+
+/* 
+ background-size: cover; //Fit into container irrespective of the view point
+
+*/
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to left, rgba(25, 153, 8, 0.692), rgba(79, 121, 3, 0.562)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.logo {
+    height: 3.5rem;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 1rem;
+
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: 2; */
+    /* animation-timing-function: ease-out; */
+
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 10rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    animation: moveInRight 1s ease-in-out;
+}
+
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 5rem;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+
+}
+
+
+.btn:hover {
+    transform: scaleX(3);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}

@@ -1,0 +1,71 @@
+body {
+    background-color: green;
+}
+
+.author-sub {
+    display: block;
+}
+
+.author-header {
+    display: block;
+}
+
+.author-box {
+    border: 2px solid #fff;
+    padding-right: 90px;
+}
+
+.heading {
+
+    border: 3px solid rgb(207, 147, 36);
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    left: 50%;
+    /* transform: scale(1, 3); */
+    /* animation-name: skewMe;
+    transform: rotate(18deg); */
+
+
+}
+
+/* 
+SCALE()
+
+transform : scale(2, 3)
+1. The first value is with/horizontal 
+2. The second value is heigth/vertical
+
+This means the width will be 2x higher than the original and 3x height than the original
+
+
+transform: scale(2, 3); This is a shorthand
+transform: scaleX(2)
+transform: scaleY(3)
+*/
+
+/* scale(): Affects the size of the element. This also applies to the font-size,
+padding,
+height,
+and width of an element,
+too. It’s also a a shorthand function for the scaleX and scaleY functions. */
+
+@keyframes skewMe {
+    0% {
+        transform: skew(20deg);
+    }
+
+    20% {
+        transform: skewY(20deg);
+    }
+
+    50% {
+        transform: scale(2, 3);
+    }
+
+    100% {
+        transform: skew(-20deg);
+    }
+}
